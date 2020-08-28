@@ -1,6 +1,6 @@
-.UserInput{
+.UserOutput{
     text-align: center;
-    border: solid thin red;
+    border: solid thin blue;
     width: 200px;
     margin: 10px auto;
 }
