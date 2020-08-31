@@ -6,31 +6,33 @@ import UserOutput from './UserOutput/UserOutput'
 
 class App extends Component {
     state = {
-        users: [
-            { username: 'griffinhaley' },
-        ]
-    }
+        username: 'griffinhaley' 
+    }  
+    
 
     changeUserNameHandler = (event) => {
-        this.setState({
-            users: [
-                { username: event.target.value, age:18 },                  
-                { username: event.target.value, age:22 },
-                { username: event.target.value, age:22 },
-            ]
-        })
+        console.log('username is being changed')
+        this.setState({username:event.target.value})
     }
 
   render() {
     return (
       <div>
-          <UserInput />
+          <UserInput 
+          changed={this.changeUserNameHandler}
+          currentName={this.state.username}
+          />
           
           <UserOutput 
-            username={this.state.users[0].username}
-            // changed={this.changeUserNameHandler} 
+            username={this.state.username}
             changed={this.changeUserNameHandler.bind(this, "Haley Griffin")}
-        >text</UserOutput>
+            >change my username
+          </UserOutput>
+
+          <UserOutput 
+            username='griffinbryce'
+            >cant change me
+          </UserOutput>
 
       </div>
     );
