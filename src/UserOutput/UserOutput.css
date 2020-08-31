@@ -2,5 +2,7 @@
     text-align: center;
     border: solid thin blue;
     width: 200px;
-    margin: 10px auto;
+    margin: 15px auto;
+    box-shadow: 10px 5px grey;
+    background: white;
 }

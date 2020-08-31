@@ -2,5 +2,8 @@
     text-align: center;
     border: solid thin red;
     width: 200px;
-    margin: 10px auto;
+    margin: 30px auto;
+    box-shadow: 10px 5px grey;
+    background: white;
+    
 }
